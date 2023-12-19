@@ -1,6 +1,7 @@
 .container {
     max-width: 400px;
     margin: auto;
+    color: green;
   }
   
   .form-group {
