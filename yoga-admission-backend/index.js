@@ -51,7 +51,7 @@ app.post('/api/admission', async (req, res) => {
     await newAdmission.save();
 
     return res.status(201).json({ message: 'Enrollment successful.' });
-  } catch (error) {
+  }catch (error) {
     console.error('Error enrolling participant:', error.message);
     return res.status(500).json({ error: 'Internal Server Error' });
   }
@@ -78,13 +78,12 @@ console.log("1");
       console.log("Done");
 
       return res.status(201).json({ message: 'Enrollment Done.' });
-    } catch (error) {
     } else {
-      return "false";
+      return res.status(400).json({ message: 'Enrollment Not Done.' });
     }
-  } catch (error) {
+  }catch (error) {
     console.error('Error changing batch:', error.message);
-    throw error; // Propagate the error to the caller
+    return res.status(500).json({ error: 'Internal Server Error' });
   }
 });
 // Serve static files (for production deployment)

@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './ChangeBatch.css';
 
 const ChangeBatch = () => {
+  const navigate = useNavigate();
     const [formData, setFormData] = useState({
         name: '',
         selectedBatch: '6 - 7 AM',
@@ -17,10 +19,9 @@ const ChangeBatch = () => {
       const respone = await axios.post('http://localhost:5000/api/changeBatch', formData);
         console.log(respone);
         setSubmitted(true);
-        // if(respone===true){
-        //     setResponse("Succesfully updated the batch");
-        // }
+        setResponse("Succesfully updated the batch");
     } catch (error) {
+      navigate('/error');
       console.error('Error submitting form:', error.message);
     }
   };
