@@ -16,7 +16,7 @@ const AdmissionForm = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/api/admission', formData);
+      const response = await axios.post('https://yogaadmission-production.up.railway.app/api/admission', formData);
       console.log(response);
       const isSuccessfull = response.data.valid;
       console.log(isSuccessfull);

@@ -16,7 +16,7 @@ const ChangeBatch = () => {
     e.preventDefault();
     console.log("submit");
     try {
-      const respone = await axios.post('http://localhost:5000/api/changeBatch', formData);
+      const respone = await axios.post('https://yogaadmission-production.up.railway.app/api/changeBatch', formData);
         console.log(respone);
         setSubmitted(true);
         setResponse("Succesfully updated the batch");
