@@ -1,0 +1,26 @@
+.home-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .intro-text {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .action-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+  }
+  
+  .enroll-card {
+    background-color: #e1f5fe; /* Light Blue */
+  }
+  
+  .change-batch-card {
+    background-color: #c8e6c9; /* Light Green */
+  }
+  
