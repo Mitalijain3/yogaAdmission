@@ -31,7 +31,9 @@ const admissionSchema = new mongoose.Schema({
 
 // Create Admission model
 const Admission = mongoose.model('Admission', admissionSchema);
-
+app.get('/api',(req,res)=>{
+  return res.status(200).json({message:"Working Fine"});
+})
 // API endpoint for submitting admission
 app.post('/api/admission', async (req, res) => {
   try {
